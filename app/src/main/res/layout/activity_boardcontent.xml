@@ -30,11 +30,21 @@
         android:background="@color/colorDivision"
         android:orientation="horizontal" />
 
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/boardcontent_adview"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_division"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9851183240081983~7180050708" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/boardcontent_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar_division"
+        android:layout_below="@id/boardcontent_adview"
         android:layout_marginTop="20dp">
 
     </androidx.recyclerview.widget.RecyclerView>

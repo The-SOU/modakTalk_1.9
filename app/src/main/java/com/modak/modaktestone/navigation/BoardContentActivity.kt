@@ -10,6 +10,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.modak.modaktestone.R
 import com.modak.modaktestone.databinding.ActivityBoardcontentBinding
 import com.modak.modaktestone.databinding.ItemContentBinding
@@ -29,6 +32,8 @@ class BoardContentActivity : AppCompatActivity() {
     var destinationCategory: String? = null
 
     var region: String? = null
+
+    lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,6 +76,13 @@ class BoardContentActivity : AppCompatActivity() {
         ab.setDisplayShowTitleEnabled(false)
         ab.setDisplayShowCustomEnabled(true)
         ab.setDisplayHomeAsUpEnabled(true)
+
+        //배너 광고
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.boardcontent_adview)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -13,6 +13,11 @@
         android:roundIcon="@mipmap/ic_final_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9851183240081983~7180050708"/>
+
         <activity android:name="com.modak.modaktestone.navigation.administrator.UploadSlideActivity"></activity>
         <activity android:name="com.modak.modaktestone.navigation.SearchTestActivity" />
         <activity android:name="com.modak.modaktestone.navigation.SearchViewActivity" />
