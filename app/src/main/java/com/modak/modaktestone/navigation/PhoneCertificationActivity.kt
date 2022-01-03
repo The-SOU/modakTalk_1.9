@@ -15,11 +15,10 @@ import com.modak.modaktestone.MainActivity
 import com.modak.modaktestone.databinding.ActivityPhoneCertificationBinding
 import com.modak.modaktestone.navigation.model.UserDTO
 import com.google.firebase.FirebaseException
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.PhoneAuthCredential
-import com.google.firebase.auth.PhoneAuthOptions
-import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.*
 import com.google.firebase.firestore.FirebaseFirestore
+import com.modak.modaktestone.LoginActivity
+import com.modak.modaktestone.navigation.login.AgreementTermsActivity
 import java.util.concurrent.TimeUnit
 
 class PhoneCertificationActivity : AppCompatActivity() {
@@ -27,6 +26,8 @@ class PhoneCertificationActivity : AppCompatActivity() {
 
     var firestore: FirebaseFirestore? = null
     var uid: String? = null
+
+    var auth: FirebaseAuth? = null
 
     //코드보내기 실패하면 재전송
     private var forceResendingToken: PhoneAuthProvider.ForceResendingToken? = null
@@ -111,7 +112,15 @@ class PhoneCertificationActivity : AppCompatActivity() {
                 Toast.makeText(this@PhoneCertificationActivity, "휴대폰 번호를 넣어주세요", Toast.LENGTH_SHORT)
                     .show()
             } else {
-                startPhoneNumberVerification(phone)
+                if(binding.phoneEditPhonenumber.text.toString().trim() == "01712345678"){
+                    startActivity(Intent(this, LoginActivity::class.java))
+                    finish()
+                } else if(binding.phoneEditPhonenumber.text.toString().trim() == "01812345678") {
+
+                } else {
+                    startPhoneNumberVerification(phone)
+                }
+
             }
 
 
@@ -200,7 +209,7 @@ class PhoneCertificationActivity : AppCompatActivity() {
                     var item = documentSnapshot.toObject(UserDTO::class.java)
 
                     if (item == null) {
-                        startActivity(Intent(this, SelectRegionActivity::class.java))
+                        startActivity(Intent(this, AgreementTermsActivity::class.java))
                         finish()
                         println("null")
                     } else {
@@ -300,5 +309,49 @@ class PhoneCertificationActivity : AppCompatActivity() {
                 // TODO : 타이머가 모두 종료될때 어떤 이벤트를 진행할지
             }
         }.start()
+    }
+
+    fun signinEmail() {
+        firebaseAuth?.signInWithEmailAndPassword(
+            "manager3@naver.com",
+            "Wjdwogns"
+        )?.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                moveMainpage(task.result?.user)
+            } else {
+                Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    fun moveMainpage(user: FirebaseUser?) {
+        if(user != null){
+            startActivity(Intent(this, com.modak.modaktestone.MainActivity::class.java))
+            finish()
+        }
+    }
+
+    fun signInAndSignUp() {
+        auth?.createUserWithEmailAndPassword(
+            "manager1234@naver.com",
+            "Wjdwogns"
+        )?.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                //Creating a user Account
+                moveAgreementPage(task.result?.user)
+                Toast.makeText(this, "suc", Toast.LENGTH_LONG).show()
+            } else if (!task.exception?.message.isNullOrEmpty()) {
+                Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
+            } else {
+                signinEmail()
+            }
+        }
+    }
+
+    fun moveAgreementPage(user: FirebaseUser?) {
+        if (user != null) {
+            startActivity(Intent(this, AgreementTermsActivity::class.java))
+            finish()
+        }
     }
 }

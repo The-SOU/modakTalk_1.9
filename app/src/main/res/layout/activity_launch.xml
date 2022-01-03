@@ -39,16 +39,50 @@
         android:id="@+id/launch_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/launch_terms_layout"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/layout_dialog_radius"
         android:fontFamily="@font/spoqahansansneo_bold"
         android:text="모닥 시작하기"
         android:textColor="@color/dots_color"
         android:textSize="@dimen/fontsize_button" />
+
+    <LinearLayout
+        android:id="@+id/launch_terms_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/launch_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:text="개인정보 처리방침"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/launch_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:text="이용약관"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>

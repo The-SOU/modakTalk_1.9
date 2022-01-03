@@ -49,13 +49,13 @@
 
     <Spinner
         android:id="@+id/selectregion_spinner"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/selectexplain"
-        android:background="@drawable/spinner_background"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/spinner_background" />
 
     <TextView
         android:id="@+id/selectexplain_second"
@@ -97,13 +97,13 @@
 
     <Spinner
         android:id="@+id/selectregion_spinner_birth"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/selectexplain_third"
-        android:background="@drawable/spinner_background"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/spinner_background" />
 
     <LinearLayout
         android:layout_width="match_parent"

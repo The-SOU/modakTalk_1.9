@@ -13,25 +13,25 @@
             android:id="@+id/account_toolbar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/spoqahansansneo_bold"
             android:text="나의 모닥"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:fontFamily="@font/spoqahansansneo_bold" />
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/account_btn_logout"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:text="로그아웃"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="10dp"
             android:layout_gravity="right"
-            android:fontFamily="@font/spoqahansansneo_bold"
-            android:textSize="20sp"
-            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/layout_dialog_radius"
-            android:backgroundTint="@color/whitegrey" />
+            android:backgroundTint="@color/whitegrey"
+            android:fontFamily="@font/spoqahansansneo_bold"
+            android:text="로그아웃"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
@@ -53,15 +53,15 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_profile"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_profile" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/account_iv_profile"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="10dp">
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -74,10 +74,10 @@
                             android:id="@+id/account_tv_nickname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/spoqahansansneo_bold"
                             android:text=""
                             android:textColor="@color/grey"
-                            android:textSize="25sp"
-                            android:fontFamily="@font/spoqahansansneo_bold" />
+                            android:textSize="25sp" />
 
                     </LinearLayout>
 
@@ -91,20 +91,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/spoqahansansneo_bold"
                             android:text="내가 쓴 글"
                             android:textColor="@color/grey"
-                            android:textSize="25sp"
-                            android:fontFamily="@font/spoqahansansneo_bold" />
+                            android:textSize="25sp" />
 
                         <TextView
                             android:id="@+id/account_tv_postcount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/spoqahansansneo_bold"
                             android:text=""
                             android:textColor="@color/grey"
-                            android:textSize="25sp"
-                            android:fontFamily="@font/spoqahansansneo_bold" />
+                            android:textSize="25sp" />
 
                     </LinearLayout>
 
@@ -118,10 +118,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/spoqahansansneo_bold"
                             android:text="좋아한 글"
                             android:textColor="@color/grey"
                             android:textSize="25sp"
-                            android:fontFamily="@font/spoqahansansneo_bold"
 
                             />
 
@@ -130,10 +130,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/spoqahansansneo_bold"
                             android:text=""
                             android:textColor="@color/grey"
-                            android:textSize="25sp"
-                            android:fontFamily="@font/spoqahansansneo_bold" />
+                            android:textSize="25sp" />
 
 
                     </LinearLayout>
@@ -173,10 +173,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/toolbar_division"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
                         android:text="내가 쓴 글"
                         android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/spoqahansansneo_regular" />
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 
@@ -199,10 +199,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/toolbar_division"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
                         android:text="나의 댓글"
                         android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/spoqahansansneo_regular" />
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 
@@ -225,10 +225,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/toolbar_division"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
                         android:text="좋아요 한 글"
                         android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/spoqahansansneo_regular" />
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 
@@ -265,10 +265,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/toolbar_division"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
                         android:text="공지사항"
                         android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/spoqahansansneo_regular" />
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 
@@ -291,10 +291,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/toolbar_division"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
                         android:text="모닥 공유"
                         android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/spoqahansansneo_regular"/>
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 
@@ -317,10 +317,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/toolbar_division"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
                         android:text="문의하기"
                         android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/spoqahansansneo_regular" />
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 
@@ -333,6 +333,115 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/account_division_color"
                 android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toolbar_division"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_bold"
+                        android:text="설정"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/handling_policy_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toolbar_division"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
+                        android:text="개인정보 처리방침"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/service_terms_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toolbar_division"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
+                        android:text="서비스 이용약관"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/community_rule_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toolbar_division"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
+                        android:text="커뮤니티 이용규칙"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/account_layout_administrator"
@@ -358,10 +467,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/toolbar_division"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/spoqahansansneo_regular"
                         android:text="슬라이드 넣기"
                         android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/spoqahansansneo_regular" />
+                        android:textSize="25sp" />
 
                 </LinearLayout>
 

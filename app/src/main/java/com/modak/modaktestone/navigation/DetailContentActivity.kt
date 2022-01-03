@@ -142,7 +142,6 @@ class DetailContentActivity : AppCompatActivity() {
         ab.setDisplayShowTitleEnabled(false)
         ab.setDisplayShowCustomEnabled(true)
         ab.setDisplayHomeAsUpEnabled(true)
-        ab.setDisplayHomeAsUpEnabled(true)
 
         binding.detailcontentRecyclerview.adapter = DetailContentRecycleViewAdapter()
         binding.detailcontentRecyclerview.layoutManager = LinearLayoutManager(this)

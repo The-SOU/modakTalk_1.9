@@ -3,7 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_add_inquiry.xml" value="0.10682023486901536" />
+        <entry key="app/src/main/res/layout/activity_agreement_terms.xml" value="0.14102564102564102" />
         <entry key="app/src/main/res/layout/activity_boardcontent.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_community_rule.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/activity_detail_content.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_handling_policy.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_home_region.xml" value="0.10682023486901536" />
+        <entry key="app/src/main/res/layout/activity_input.xml" value="0.10682023486901536" />
+        <entry key="app/src/main/res/layout/activity_launch.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_notice_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_phone_certification.xml" value="0.10682023486901536" />
+        <entry key="app/src/main/res/layout/activity_select_region.xml" value="0.10682023486901536" />
+        <entry key="app/src/main/res/layout/activity_service_terms.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_report.xml" value="0.165" />
       </map>
     </option>
   </component>

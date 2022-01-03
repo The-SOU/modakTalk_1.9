@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.kakao.sdk.auth.LoginClient
 import com.kakao.sdk.auth.model.OAuthToken
+import com.modak.modaktestone.navigation.login.AgreementTermsActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -38,15 +39,6 @@ class LoginActivity : AppCompatActivity() {
             .requestEmail().build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        binding.phonenumberLoginButton.setOnClickListener {
-            startActivity(Intent(this, PhoneCertificationActivity::class.java))
-            finish()
-        }
-
-        binding.googleLoginButton.setOnClickListener {
-            //First step
-            googleLogin()
-        }
         binding.kakaoLoginButton.setOnClickListener {
             signinEmail()
         }
@@ -89,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
         )?.addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 //Creating a user Account
-                moveSelectRegionPage(task.result?.user)
+                moveAgreementPage(task.result?.user)
             } else if (!task.exception?.message.isNullOrEmpty()) {
                 Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
             } else {
@@ -137,9 +129,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun moveSelectRegionPage(user: FirebaseUser?) {
+    fun moveAgreementPage(user: FirebaseUser?) {
         if (user != null) {
-            startActivity(Intent(this, SelectRegionActivity::class.java))
+            startActivity(Intent(this, AgreementTermsActivity::class.java))
             finish()
         }
     }
@@ -155,7 +147,7 @@ class LoginActivity : AppCompatActivity() {
         auth?.signInWithCredential(credential)?.addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 //Login
-                moveSelectRegionPage(task.result?.user)
+                moveAgreementPage(task.result?.user)
             } else {
                 Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
             }

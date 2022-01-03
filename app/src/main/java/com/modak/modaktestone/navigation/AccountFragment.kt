@@ -18,6 +18,9 @@ import com.modak.modaktestone.navigation.model.UserDTO
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
+import com.modak.modaktestone.navigation.terms.CommunityRuleActivity
+import com.modak.modaktestone.navigation.terms.HandlingPolicyActivity
+import com.modak.modaktestone.navigation.terms.ServiceTermsActivity
 
 class AccountFragment : Fragment() {
     private var _binding: FragmentAccountBinding? = null
@@ -96,6 +99,21 @@ class AccountFragment : Fragment() {
         }
         binding.accountBtnInquiry.setOnClickListener { v ->
             var intent = Intent(v.context, MyInquiryActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.handlingPolicyBtn.setOnClickListener { v ->
+            var intent = Intent(v.context, HandlingPolicyActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.serviceTermsBtn.setOnClickListener { v ->
+            var intent = Intent(v.context, ServiceTermsActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.communityRuleBtn.setOnClickListener { v ->
+            var intent = Intent(v.context, CommunityRuleActivity::class.java)
             startActivity(intent)
         }
 
