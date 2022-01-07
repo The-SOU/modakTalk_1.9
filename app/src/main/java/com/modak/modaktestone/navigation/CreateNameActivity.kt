@@ -32,7 +32,6 @@ class CreateNameActivity : AppCompatActivity() {
     var url: Any? = null
 
 
-
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,21 +60,28 @@ class CreateNameActivity : AppCompatActivity() {
                     ""
                 } else null
             }
-        binding.createnameEdittext.filters = arrayOf(filterKorea, LengthFilter(10))
-
+        binding.createnameEdittext.filters = arrayOf(filterKorea)
 
 
         //edittext listener
         binding.createnameEdittext.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (binding.createnameEdittext.text.toString().isEmpty()) {
+                if (binding.createnameEdittext.text.toString().isNotEmpty()) {
+                    if (binding.createnameEdittext.text?.length!! <= 10) {
+                        binding.createnameBtn.isEnabled = true
+                        binding.createnameBtn.backgroundTintList =
+                            ContextCompat.getColorStateList(applicationContext, R.color.dots_color)
+                    } else {
+                        binding.createnameBtn.isEnabled = false
+                        binding.createnameBtn.backgroundTintList =
+                            ContextCompat.getColorStateList(applicationContext, R.color.whitegrey)
+                    }
+
+
+                } else {
                     binding.createnameBtn.isEnabled = false
                     binding.createnameBtn.backgroundTintList =
                         ContextCompat.getColorStateList(applicationContext, R.color.whitegrey)
-                } else {
-                    binding.createnameBtn.isEnabled = true
-                    binding.createnameBtn.backgroundTintList =
-                        ContextCompat.getColorStateList(applicationContext, R.color.dots_color)
                 }
             }
 
@@ -122,7 +128,6 @@ class CreateNameActivity : AppCompatActivity() {
             imm.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }
-
 
 
 }
